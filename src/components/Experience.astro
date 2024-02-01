@@ -1,0 +1,40 @@
+---
+import type { Code, Debug } from "astro:components"
+import ExperienceItem from "./ExperienceItem.astro"
+import type { Image } from "astro:assets"
+
+const EXPERIENCE = [
+    {
+        date: 'Actualmente',
+        title: 'Desarrollador Web - Upwork',
+        description:`Como Freelanceen Upwork, desarrollo sitios web funcionales y atractivos,
+        utilizando tecnologías como HTML, CSS, JavaScript, Node.js, Astro y Tailwind
+        para optimizar rendimiento y diseño.Actualmente, me especializo en el desarrollo
+        de servidores con Node.js en el back-end, gestionando bases de datos para garantizar
+        aplicaciones sin problemas. A lo largo de mi carrera, he priorizado la usabilidad,
+        SEO y accesibilidad desde el inicio, contribuyendo al éxito continuo de cada proyecto.`,
+        link:'#',
+    },
+    {
+        date: 'julio 2023',
+        title: 'Asistente de Desarrollo Web - Grupos Travel',
+        description:`Como Asistente de Desarrollo Web, colaboré en 
+        la creación de sitios web, aplicando tecnologías como HTML, CSS, JavaScript y
+        Node.js para optimizar rendimiento y diseño. Brindé apoyo en
+        el desarrollo de servidores en Node.js y gestioné bases de datos para asegurar el
+        funcionamiento fluido de las aplicaciones, contribuyendo al éxito continuo de cada proyecto.`,
+        link:'#',
+    }
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">     
+    {
+        EXPERIENCE.map(experience =>(
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }             
+    
+</ol>
+

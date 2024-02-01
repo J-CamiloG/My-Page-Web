@@ -1,0 +1,148 @@
+---
+import NextJs from './icons/NextJs.astro'
+import JavaScript from './icons/JavaScript.astro'
+import Html from './icons/Html.astro'
+import Css from './icons/Css.astro'
+import LinkButton from "./LinkButton.astro"
+import GitHub from "./icons/Github.astro"
+import Link from "./icons/Link.astro"
+
+const TAGS = {
+    NEXT: {
+        name:'Next.js',
+        class: 'bg-gray-200/10 text-white' ,
+        icono: NextJs,
+    },
+    JAVASCRIPT:{
+        name:'JavaScript',
+        class: 'bg-gray-200/10 text-white' ,
+        icono: JavaScript,
+    },
+    HTML:{
+        name:'Html',
+        class: 'bg-gray-200/10 text-white' ,
+        icono: Html,
+    },
+    CSS:{
+        name:'Css',
+        class: 'bg-gray-200/10 text-white' ,
+        icono: Css,
+    },
+}
+const PROJECTS = [
+    {
+        title: 'Juego',
+        description:` Inspirado en el icónico dinosaurio pixelado de Google Chrome, 
+        este juego ofrece una auténtica sensación de nostalgia al tiempo que incorpora mi 
+        toque creativo único. Sumérgete en una experiencia donde lo retro se encuentra con 
+        la innovación, explorando un mundo dinámico y emocionante que rinde homenaje a los 
+        primeros días de la era digital.`,
+        image: '/public/projects/Game-dinosur.webp',
+        github:'https://github.com/J-CamiloG/Game-dinosaur', 
+        link: 'https://game-dinosaur-topaz.vercel.app/',
+        tags:[TAGS.JAVASCRIPT,TAGS.HTML,TAGS.CSS],
+    },
+    {
+        title: 'E-Commerce',
+        description:` Una aplicación innovadora 
+        que ofrece una experiencia interactiva y educativa para explorar
+        el mundo de las banderas. Dirigida a entusiastas de la cultura y 
+        viajeros, la aplicación proporciona información detalladade las banderas de manera atractiva y enriquecedora.`,
+        image: '/public/projects/E-commerce.webp',
+        github:'https://github.com/J-CamiloG/e-commerce-challenge', 
+        link: 'https://e-commerce-challenge.vercel.app/',
+        tags:[TAGS.JAVASCRIPT,TAGS.HTML,TAGS.CSS],
+    },
+    {
+        title: 'Workin landing page',
+        description:` Esta página de inicio minimalista y centrada en la
+        profesionalidad está diseñada para destacar tu carrera y proyectos. 
+        Con un diseño limpio y atractivo, "Workin" ofrece una introducción concisa sobre
+        ti, resalta tus habilidades clave y presenta de manera impactante tus proyectos destacados. `,
+        image: '/public/projects/Workin-landing.webp',
+        github:'https://github.com/J-CamiloG/workit-landing-page', 
+        link: 'https://workit-landing-page-rho.vercel.app/',
+        tags:[TAGS.HTML,TAGS.CSS],
+    },
+    {
+        title: 'Buscador de Banderas',
+        description:` Una aplicación innovadora 
+        que ofrece una experiencia interactiva y educativa para explorar
+        el mundo de las banderas. Dirigida a entusiastas de la cultura y 
+        viajeros, la aplicación proporciona información detalladade las banderas de manera atractiva y enriquecedora.`,
+        image: '/public/projects/Countries.webp',
+        github:'https://github.com/J-CamiloG/rest-countries-api-with-color-theme-switcher', 
+        link: 'https://rest-countries-api-with-color-theme-switcher-olive.vercel.app/',
+        tags:[TAGS.JAVASCRIPT,TAGS.HTML,TAGS.CSS],
+    },
+    {
+        title: 'Contador Pomodoro',
+        description:`Optimiza tu productividad con mi 
+        sencillo contador Pomodoro. Este proyecto ofrece una 
+        aplicación minimalista que te ayuda a gestionar tu tiempo 
+        de manera eficiente. Divide tu trabajo en intervalos de 25 minutos seguidos de breves descansos de 5 minutos,
+        manteniéndote enfocado y productivo. ¡Haz del tiempo tu aliado con esta herramienta simple y efectiva!` , 
+        image: '/public/projects/Pomodoro.webp',
+        github:'https://github.com/J-CamiloG/Contador-Pomodoro', 
+        link: 'https://contador-pomodoro.vercel.app/',
+        tags:[TAGS.JAVASCRIPT,TAGS.HTML,TAGS.CSS],
+    },
+]
+---
+
+<div class="flex flex-col gap-y-20">
+    {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                    <img 
+                    alt="Recién llegado vs 5 años en Nueva Zelanda" 
+                    class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" 
+                    loading="lazy" 
+                    src={image}
+                    />
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 md:max-w-lg">
+                <h3 class="text-2xl font-bold text-yellow-200/80">
+                {title}
+                </h3>
+                <div class="flex flex-wrap mt-2">
+                <ul class="flex flex-row mb-2 gap-x-2">
+                    {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                        >
+                            <tag.icono class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                    ))}
+                </ul>
+            <div class=" mt-2 text-white-200/90">
+                {description}
+            </div>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+            {github && (
+            <LinkButton href={github}>
+                <GitHub class="size-6" />
+                Code
+                
+            </LinkButton>
+            )}
+            {link && (
+            <LinkButton href={link}>
+                <Link class="size-4" />
+                Preview
+            </LinkButton>
+            )}
+                </footer>
+            </div>
+    </div>
+        </article>
+        ))
+    }
+    </div>

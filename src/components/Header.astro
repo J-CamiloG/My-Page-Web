@@ -1,0 +1,41 @@
+---
+const navItems = [
+    {
+        title: "Experiencia",
+        label: "experiencia",
+        url: "/#experiencia",
+    },
+    {
+        title: "Proyectos",
+        label: "proyectos",
+        url: "/#Proyectos",
+    },
+    {
+        title: "Sobre mí",
+        label: "sobre-mi",
+        url: "/#sobre-mi",
+    },
+]
+---
+
+<header class="flex justify-between items-center py-5 xl:w-[1120px] mx-auto">
+    <img class="rounded-full size-12 md:mx-3" 
+    src="/public/photo camilo.jpg" 
+    alt="camilo photo">
+
+
+    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-200">
+    {
+        navItems.map((link) => (
+            <a
+            class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+            aria-label={link.label}
+            href={link.url}
+        >
+            {link.title}
+        </a>
+        ))
+    }
+    </nav>
+</header>
+
