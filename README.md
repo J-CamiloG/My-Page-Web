@@ -2,47 +2,16 @@
 
 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Bienvenido a mi página web portafolio, un espacio donde convergen mi pasión por el diseño y desarrollo web. En la creación de este proyecto, he optado por emplear diversas tecnologías que considero fundamentales para lograr una experiencia de usuario excepcional.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+ ## JavaScript (JS):
+El núcleo dinámico de mi página está impulsado por JavaScript, proporcionando interactividad y una interfaz de usuario fluida. Utilicé JS para mejorar la experiencia del visitante, permitiendo una navegación suave y la carga dinámica de contenido para una interacción más enriquecedora.
 
-## 🚀 Project Structure
+## Astro:
+La elección de Astro como framework me permite optimizar la velocidad de carga de la página al generar un sitio estático mientras mantiene la capacidad de incorporar elementos dinámicos cuando sea necesario. Esto garantiza una experiencia de usuario rápida y eficiente, fundamental para retener la atención del espectador.
 
-Inside of your Astro project, you'll see the following folders and files:
+## HTML:
+La estructura fundamental de mi página se basa en HTML, el lenguaje estándar para la creación de contenido web. Utilizo HTML de manera semántica para garantizar una accesibilidad adecuada y facilitar la comprensión del contenido tanto para los visitantes como para los motores de búsqueda.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Tailwind CSS:
+Para el diseño y estilo de mi página, elegí Tailwind CSS por su enfoque de utilidad y su flexibilidad. Esta biblioteca de estilos me permite personalizar cada elemento de manera eficiente y mantener un código limpio y fácil de mantener. La modularidad de Tailwind CSS facilita la adaptación y la creación de un diseño atractivo y moderno.
